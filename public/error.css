@@ -1,0 +1,41 @@
+
+body{
+    margin:0; 
+    padding:0; 
+}
+
+.backGround{
+    position:fixed; 
+    z-index:-2;
+    top:0; 
+    width:100vw;
+    height:100vh;
+    background-image: linear-gradient(to right top, #874c03, #88321e, #7c1c31, #651340, #441648, #351f51, #212756, #002c57, #003b63, #004b6e, #005a76, #00697c);
+    background-size:200vw 200vh;
+    transition:all 1s ease-in;
+    animation: backgroundGradient 15s infinite;
+}
+@keyframes backgroundGradient{
+    0%{
+        background-position:0% 0%; 
+    } 50%{
+        background-position:-40vh -40vw; 
+    }100%{
+        background-position:0% 0%; 
+    }
+}
+
+.content{
+    display:flex;
+    align-items: flex-start;
+    justify-content: center;
+    width:100vw;
+    height:100vh;
+}
+
+#header{
+    margin-top:30vh;
+    color:white;
+
+    font-size: 3rem;
+}
