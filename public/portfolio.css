@@ -434,6 +434,7 @@ h3{
     border-radius:10px;
     overflow:hidden;
 }
+
 img{
     width:100%; 
     height:100%;
@@ -591,6 +592,7 @@ img{
     text-align:center;
     height:3rem;
 }
+
 .inputGroup textarea{
     font-size:calc(0.8em + 1vmin); 
     text-align:center;
@@ -614,8 +616,8 @@ img{
     background-color: #321576;
     cursor:pointer;
     display:block;
-    width:8rem;
-    height:3.5rem;
+    width:10rem;
+    height:4rem;
     border:1px solid #401a97;
     border-radius:1rem;
 }
