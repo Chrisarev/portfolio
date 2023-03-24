@@ -141,7 +141,6 @@
                             <circle id="Ellipse 1" cx="73.5" cy="65.5" r="17.5" fill="white"/>
                             </g>
                             <g id="stars">
-                                <%# fill="url(#paint4_linear_1_3)"%>
                             <path id="Star 5" class="star" d="M121 64L124.143 72.9828H134.315L126.086 78.5344L129.229 87.5172L121 81.9656L112.771 87.5172L115.914 78.5344L107.685 72.9828H117.857L121 64Z" fill="#FFFFFF"/>
                             <path id="Star 2" class="star" d="M40 33L43.1432 41.9828H53.3148L45.0858 47.5344L48.229 56.5172L40 50.9656L31.771 56.5172L34.9142 47.5344L26.6852 41.9828H36.8568L40 33Z"  fill="#FFFFFF"/>
                             <path id="Star 1" class="star" d="M28 63L31.1432 71.9828H41.3148L33.0858 77.5344L36.229 86.5172L28 80.9656L19.771 86.5172L22.9142 77.5344L14.6852 71.9828H24.8568L28 63Z"  fill="#FFFFFF"/>
@@ -341,11 +340,11 @@
                 <form action="/contact" method="POST" id="contactForm">
                     <div class="inputGroup">
                         <label for="nameInput">Enter your name</label>
-                        <input onkeydown="return /[a-z]/i.test(event.key)" name="name" type="text" id="nameInput" placeholder="name" required>
+                        <input onkeydown="return /[a-z + $]/i.test(event.key)" maxlength="256" name="name" type="text" id="nameInput" placeholder="name" required>
                     </div>
                     <div class="inputGroup">
                         <label for="emailInput">Enter your Email</label>
-                        <input name="email" type="email" id="emailInput" placeholder="ex@email.com" required>
+                        <input onkeydown="return /[a-z+0-9+@+.]/i.test(event.key)" name="email" maxlength="320" type="email" id="emailInput" placeholder="ex@email.com" required>
                     </div>
                     <div class="inputGroup">
                         <label for="phoneInput">Enter your Phone # *Optional</label>
@@ -353,7 +352,7 @@
                     </div>
                     <div class="inputGroup">
                         <label for="comment">Leave a comment</label>
-                        <textarea name="comment" id="comment" cols="60" rows="4"
+                        <textarea maxlength="320"name="comment" id="comment" cols="60" rows="4"
                             placeholder="comment"></textarea>
                     </div>
                     <div class="buttonHolder">
