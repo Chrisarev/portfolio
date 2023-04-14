@@ -35,6 +35,15 @@ app.set('view engine', 'ejs');
 ///so we can run app.js from outside of yelpcamp folder 
 app.set('views', path.join(__dirname, 'views')) 
 
+/*** HTTP -> HTTPS IN ORDER TO USE SSL CERTIFICATE ***/
+app.use((req, res, next) => {
+    if (req.header('x-forwarded-proto') !== 'https') {
+      res.redirect(`https://${req.header('host')}${req.url}`)
+    } else {
+      next();
+    }
+});
+
 ///sets path for static files
 app.use(express.static(path.join(__dirname, 'public'))); 
 
