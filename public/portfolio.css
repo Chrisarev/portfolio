@@ -13,12 +13,20 @@ nav {
     z-index: 1000;
 }
 
+
 #logo {
     /*opacity:0;*/
     height: 80px;
     width: 80px;
     /*animation: animateFromTop 1s forwards;
     animation-delay: 700ms; */
+}
+
+@media (max-width:800px) {
+    #logo{
+        height:60px;
+        width:60px;
+    }
 }
 
 #contactLink {
@@ -526,7 +534,9 @@ img{
 .inputGroup{
     display:flex;
     flex-direction: column;
-    width:50%;
+    width:70%;
+    max-width: 80rem;
+    flex-basis: 100%;
 }
 
 .inputGroup label, .inputGroup input{
