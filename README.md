@@ -3,11 +3,12 @@ by Chrisarev
 
 Description
 ----------------------------
-Personal portfolio website for myself to showcase previous work to employers and clients.
+Personal portfolio website to showcase my projects. 
 
 Technology
 ----------------------------
-Front-end EJS templating engine. Back-end Express.js
+Front-end made with EJS.
+Back-end made with Express.js
 
 License
 ----------------------------
